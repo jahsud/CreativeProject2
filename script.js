@@ -41,7 +41,7 @@ function onClick(e) {
     fetch(`https://api.frankfurter.app/latest?amount=${amount}&from=${from}&to=${to}`)
         .then(resp => resp.json())
         .then((data) => {
-            let result = '<p>' + amount + ' ' + from + ' are <strong>' + data.rates[to] + ' ' + to + '</strong><p>';
+            let result = '<p>' + amount + ' ' + from + ' are <strong>' + data.rates[to] + ' ' + to + '</strong><p><br/><br/>';
             document.getElementById('conversionResults').innerHTML = result;
         });
 }
