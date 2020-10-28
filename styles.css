@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Catamaran';
+    font-size: 22px;
+}
+
+
+/*------HEADER------*/
+
+.header {
+    padding: 80px;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url("img/currency.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+/*------NAVBAR------*/
+
+
+/* Add a black background color to the top navigation */
+
+#topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+
+/* Style the links inside the navigation bar */
+
+#topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+/* Change the color of links on hover */
+
+#topnav a:hover {
+    background-color: #ddd;
+    color: #20272F;
+}
+
+
+/* Add an active class to highlight the current page */
+
+#topnav a.active {
+    background-color: #017019;
+    color: white;
+}
+
+
+/* Hide the link that should open and close the topnav on small screens */
+
+#topnav .icon {
+    display: none;
+}
+
+
+/* Right-aligned link */
+
+#navbar a.right {
+    float: right;
+    /* Float a link to the right */
+}
+
+
+/* Change color on hover/mouse-over */
+
+#navbar a:hover {
+    background-color: #ddd;
+    /* Grey background color */
+    color: black;
+    /* Black text color */
+}
+
+#topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 11px;
+    margin-right: 15px;
+    font-size: 17px;
+}
+
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+
+.sticky+.content {
+    padding-top: 50px;
+}
+
+
+/*-----CONTENT------*/
+
+
+/* Ensure proper sizing */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Column container */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* Create two unequal columns that sits next to each other */
+
+
+/* Sidebar/left column */
+
+.side {
+    color: whitesmoke;
+    flex: 40%;
+    /* Set the width of the sidebar */
+    background-color: #484a46;
+    /* Grey background color */
+    padding: 50px;
+    /* Some padding */
+}
+
+
+/* Main column */
+
+.main {
+    flex: 60%;
+    /* Set the width of the main content */
+    background-color: #e5e5e1;
+    /* White background color */
+    padding: 40px;
+    /* Some padding */
+}
+
+
+/*-----CONTENT------*/
+
+.content input[type=text] {
+    width: 60px;
+    padding: 10px 16px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+.content input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+input[type=submit] {
+    background-color: #017019;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #36a54e;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.footer {
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #1f262e;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+}
+
+.button {
+    background-color: #017019;
+    border: none;
+    color: white;
+    padding: 10px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #36a54e;
+}
+
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+
+@media screen and (max-width: 600px) {
+    #topnav a:not(:first-child) {
+        display: none;
+    }
+    #topnav input:not(:first-child) {
+        display: none;
+    }
+    #topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+
+@media screen and (max-width: 600px) {
+    #topnav.responsive {
+        position: relative;
+    }
+    #topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    #topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}

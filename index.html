@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>CreativeProject2</title>
+    <link rel="stylesheet" href="/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="header" id="top">
+        <h1>Currency Converter</h1>
+        <h3>🎨 Creative Project #2</h3>
+    </div>
+
+    <div id="topnav" class="myTopnav">
+        <a href="#top" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <input type="text" placeholder="Search..">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div class="row content">
+        <div class="side">
+            <h2>Welcome to our Dollar Converter!</h2>
+            <p>Available for all different dollar currencies.</p>
+        </div>
+        <div class="main">
+            <form>
+                <legend>
+                    <h2>Enter amount and select currencies</h2>
+                </legend><br/>
+                <label>Amount</label>
+                <input id="currencyInput" type="text"></input><br/>
+                <label>From</label>
+                <select id="from">
+                    <option value="AUD">AUD: Australian Dollar</option>
+                    <option value="CAD">CAD: Canadian Dollar</option>
+                    <option value="HKD">HKD: Hong Kong Dollar</option>
+                    <option value="NZD">NZD: New Zealand Dollar</option>
+                    <option value="SGD">SGD: Singapore Dollar</option>
+                    <option value="USD">USD: United States Dollar</option>
+                </select>
+                <br/>
+                <label>To</label>
+                <select id="to">
+                    <option value="AUD">AUD: Australian Dollar</option>
+                    <option value="CAD">CAD: Canadian Dollar</option>
+                    <option value="HKD">HKD: Hong Kong Dollar</option>
+                    <option value="NZD">NZD: New Zealand Dollar</option>
+                    <option value="SGD">SGD: Singapore Dollar</option>
+                    <option value="USD">USD: United States Dollar</option>
+                </select>
+                <br/><br/>
+                <input id="currencySubmit" type="submit" value="Submit"></input>
+            </form>
+            <br/><br/>
+            <div id="conversionResults">
+            </div>
+            <br/><br/>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Andres Herrera | Copyright © 2020 All rights reserved.</p>
+        <p><a href="https://github.com/jahsud/CreativeProject2.git" target="_blank" class="button">GitHub Repo</a></p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+    <script text="type/javascript" src="/script.js"></script>
+</body>
+
+</html>
